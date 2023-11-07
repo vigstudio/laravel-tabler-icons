@@ -1,0 +1,45 @@
+{
+    "name": "vigstudio/laravel-tabler-icons",
+    "description": "The Tabler Icons Blade Component",
+    "keywords": [
+        "laravel-tabler-icons"
+    ],
+    "homepage": "https://github.com/vigstudio/laravel-tabler-icons",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "VigStudio",
+            "email": "admin@nghiane.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "illuminate/support": "^8.0|^9.0|^10.0",
+        "illuminate/view": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "ext-zip": "*",
+        "illuminate/filesystem": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VigStudio\\TablerIcons\\": "src"
+        }
+    },
+    "scripts": {
+        "update-icons": "bin/update-icons",
+        "update-example": "bin/update-example"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VigStudio\\TablerIcons\\TablerIconsServiceProvider"
+            ]
+        }
+    }
+}
