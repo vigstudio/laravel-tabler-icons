@@ -29,8 +29,8 @@
         }
     },
     "scripts": {
-        "update-icons": "bin/update-icons",
-        "update-example": "bin/update-example"
+        "icons": "bin/icons",
+        "example": "bin/example"
     },
     "config": {
         "sort-packages": true

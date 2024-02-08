@@ -2,6 +2,7 @@
 
 namespace VigStudio\TablerIcons;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 
 class TablerIconsServiceProvider extends ServiceProvider
@@ -12,6 +13,7 @@ class TablerIconsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'tabler-icons');
+        File::requireOnce(__DIR__ . '/../helpers/icon.php');
     }
 
     /**
