@@ -17,10 +17,18 @@ composer require vigstudio/laravel-tabler-icons
 ...
 ```
 
+Or
+
+```php
+{{ tabler_icon('arrow-forward-up') }}
+{{ tabler_icon('arrow-merge-alt-left') }}
+{{ tabler_icon('arrow-left-circle') }}
+...
+```
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 
 ## License
 
