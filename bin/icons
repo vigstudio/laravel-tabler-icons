@@ -11,7 +11,7 @@ $tempFile = __DIR__ . '/temp.zip';
 
 echo 'Downloading the last icons...' . PHP_EOL;
 
-file_put_contents($tempFile, file_get_contents('https://github.com/tabler/tabler-icons/archive/refs/heads/master.zip'));
+file_put_contents($tempFile, file_get_contents('https://github.com/tabler/tabler-icons/releases/download/v3.31.0/tabler-icons-3.31.0.zip'));
 
 echo 'Downloaded. Extracting the archive...' . PHP_EOL;
 
