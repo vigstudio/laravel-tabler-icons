@@ -1,7 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-usb" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M8 8h8v9a3 3 0 0 1 -3 3h-2a3 3 0 0 1 -3 -3v-9z" />
-  <path d="M10 8v-4h4v4" />
+<!--
+tags: [connect, port, external, storage, data, transfer, plug, interface, peripheral, hardware]
+category: Devices
+version: "2.32"
+unicode: "fc59"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 8h10v8a5 5 0 0 1 -10 0z" />
+  <path d="M9 8v-5h6v5" />
 </svg>
-
-

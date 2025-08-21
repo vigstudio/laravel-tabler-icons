@@ -1,5 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-temperature-snow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [cold, winter, climate, chills, freeze, degree, weather, forecast, frost, ice]
+version: "2.47"
+unicode: "fda3"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M4 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 1 0 -4 0v8.5" />
   <path d="M4 9h4" />
   <path d="M14.75 4l1 2h2.25" />
@@ -10,5 +24,3 @@
   <path d="M17 20l-3 -5h-1" />
   <path d="M12 9l2.088 .008" />
 </svg>
-
-

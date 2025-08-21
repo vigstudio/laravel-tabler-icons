@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-password-fingerprint" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [biometric, security, authentication, identity, access, login, verify, privacy, protection, recognition]
+category: System
+version: "2.34"
+unicode: "fc7b"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M17 8c.788 1 1 2 1 3v1" />
   <path d="M9 11c0 -1.578 1.343 -3 3 -3s3 1.422 3 3v2" />
   <path d="M12 11v2" />
@@ -14,5 +29,3 @@
   <path d="M17 20l4 -2" />
   <path d="M17 18l4 2" />
 </svg>
-
-

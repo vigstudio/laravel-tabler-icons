@@ -1,16 +1,27 @@
 <?php
 
-use Illuminate\Support\HtmlString;
-
 if (! function_exists('tabler_icon')) {
-    function tabler_icon(string $name): HtmlString
+    /**
+     * Helper function to render TablerIcon
+     *
+     * @param string $name
+     * @param array $attributes
+     * @return \Illuminate\View\View
+     */
+    function tabler_icon(string $name, array $attributes = [])
     {
-        $component =  view()->exists('tabler-icons::components.' . $name);
-        if(! $component) {
-            return new HtmlString('');
-        }
-        $html =  view('tabler-icons::components.' . $name)->render();
+        return app('tabler-icon')::render($name, $attributes);
+    }
+}
 
-        return new HtmlString($html);
+if (! function_exists('TablerIcon')) {
+    /**
+     * Global helper to access TablerIcon
+     *
+     * @return \VigStudio\TablerIcons\TablerIcon
+     */
+    function TablerIcon()
+    {
+        return app('tabler-icon');
     }
 }

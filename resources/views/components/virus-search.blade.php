@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-virus-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+category: Health
+tags: [covid, coronavirus, biology, infection, infected, cell, viral, infectious, disease]
+version: "1.31"
+unicode: "ed67"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M17 12a5 5 0 1 0 -5 5" />
   <path d="M12 7v-4" />
   <path d="M11 3h2" />
@@ -18,5 +33,3 @@
   <path d="M17.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" />
   <path d="M19.5 19.5l2.5 2.5" />
 </svg>
-
-

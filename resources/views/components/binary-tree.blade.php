@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-binary-tree" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [data, diversity, it, math]
+unicode: "f5d4"
+version: "1.112"
+category: Computers
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M6 20a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
   <path d="M16 4a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
   <path d="M16 20a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
@@ -10,5 +25,3 @@
   <path d="M10.065 13.705l2.876 4.6" />
   <path d="M15.063 5.7l2.881 4.61" />
 </svg>
-
-

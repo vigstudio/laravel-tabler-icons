@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-snowflake" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+category: Weather
+tags: [winter, weather, cold, frost]
+version: "1.8"
+unicode: "ec0b"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M10 4l2 1l2 -1" />
   <path d="M12 2v6.5l3 1.72" />
   <path d="M17.928 6.268l.134 2.232l1.866 1.232" />
@@ -13,5 +28,3 @@
   <path d="M4.072 9.732l1.866 -1.232l.134 -2.232" />
   <path d="M3.34 7l5.629 3.25l2.99 -1.738" />
 </svg>
-
-

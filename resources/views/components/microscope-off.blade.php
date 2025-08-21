@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-microscope-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+category: Health
+tags: [school, education, learning, laboratory, experimental, chemistry, biology, medical, bacteria, technology, test]
+unicode: "f40e"
+version: "1.94"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M5 21h14" />
   <path d="M6 18h2" />
   <path d="M7 18v3" />
@@ -9,5 +24,3 @@
   <path d="M12 21a6 6 0 0 0 5.457 -3.505m.441 -3.599a6 6 0 0 0 -2.183 -3.608" />
   <path d="M3 3l18 18" />
 </svg>
-
-

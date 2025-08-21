@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-dotted" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [shape, point, check]
+version: "1.26"
+unicode: "ed28"
+category: Shapes
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M7.5 4.21l0 .01" />
   <path d="M4.21 7.5l0 .01" />
   <path d="M3 12l0 .01" />
@@ -13,5 +28,3 @@
   <path d="M16.5 4.21l0 .01" />
   <path d="M12 3l0 .01" />
 </svg>
-
-

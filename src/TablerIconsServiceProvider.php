@@ -14,6 +14,21 @@ class TablerIconsServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'tabler-icons');
         File::requireOnce(__DIR__ . '/../helpers/icon.php');
+
+        // Publish views
+        $this->publishes([
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/tabler-icons'),
+        ], 'tabler-icons-views');
+
+        // Load test routes in development
+        if (app()->environment(['local', 'testing'])) {
+            $this->loadRoutesFrom(__DIR__ . '/../routes/test.php');
+        }
+
+        // Register facade alias globally
+        if (! class_exists('TablerIcon')) {
+            class_alias(\VigStudio\TablerIcons\Facades\TablerIcon::class, 'TablerIcon');
+        }
     }
 
     /**
@@ -21,6 +36,12 @@ class TablerIconsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Register the TablerIcon service
+        $this->app->singleton('tabler-icon', function () {
+            return new TablerIcon();
+        });
+
+        // Register the facade alias
+        $this->app->alias('tabler-icon', \VigStudio\TablerIcons\TablerIcon::class);
     }
 }

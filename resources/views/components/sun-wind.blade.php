@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-wind" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [temperature, wheater, thermometer, forecast, windy]
+category: Weather
+version: "1.73"
+unicode: "f238"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M14.468 10a4 4 0 1 0 -5.466 5.46" />
   <path d="M2 12h1" />
   <path d="M11 3v1" />
@@ -10,5 +25,3 @@
   <path d="M15 13h5a2 2 0 1 0 0 -4" />
   <path d="M12 16h5.714l.253 0a2 2 0 0 1 2.033 2a2 2 0 0 1 -2 2h-.286" />
 </svg>
-
-

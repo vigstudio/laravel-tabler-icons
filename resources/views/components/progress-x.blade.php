@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-progress-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+category: System
+tags: [cancel, stop, abort, indicator, close, status, update, decline, process, deny]
+version: "2.12"
+unicode: "fa0c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M10 20.777a8.942 8.942 0 0 1 -2.48 -.969" />
   <path d="M14 3.223a9.003 9.003 0 0 1 0 17.554" />
   <path d="M4.579 17.093a8.961 8.961 0 0 1 -1.227 -2.592" />
@@ -8,5 +23,3 @@
   <path d="M14 14l-4 -4" />
   <path d="M10 14l4 -4" />
 </svg>
-
-

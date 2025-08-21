@@ -15,13 +15,13 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0|^8.1",
-        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
-        "illuminate/view": "^8.0|^9.0|^10.0|^11.0"
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/view": "^11.0|^12.0"
     },
     "require-dev": {
         "ext-zip": "*",
-        "illuminate/filesystem": "^8.0|^9.0|^10.0|^11.0"
+        "illuminate/filesystem": "^11.0|^12.0"
     },
     "autoload": {
         "psr-4": {
@@ -39,7 +39,10 @@
         "laravel": {
             "providers": [
                 "VigStudio\\TablerIcons\\TablerIconsServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "TablerIcon": "VigStudio\\TablerIcons\\Facades\\TablerIcon"
+            }
         }
     }
 }

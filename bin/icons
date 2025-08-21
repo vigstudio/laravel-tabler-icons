@@ -9,9 +9,26 @@ $filesystem = new Filesystem();
 
 $tempFile = __DIR__ . '/temp.zip';
 
-echo 'Downloading the last icons...' . PHP_EOL;
+echo 'Getting latest version...' . PHP_EOL;
 
-file_put_contents($tempFile, file_get_contents('https://github.com/tabler/tabler-icons/releases/download/v3.31.0/tabler-icons-3.31.0.zip'));
+// Get latest release info from GitHub API
+$latestReleaseUrl = 'https://api.github.com/repos/tabler/tabler-icons/releases/latest';
+$context = stream_context_create([
+    'http' => [
+        'method' => 'GET',
+        'header' => [
+            'User-Agent: PHP'
+        ]
+    ]
+]);
+
+$releaseData = json_decode(file_get_contents($latestReleaseUrl, false, $context), true);
+$latestVersion = $releaseData['tag_name'];
+
+echo "Downloading icons version {$latestVersion}..." . PHP_EOL;
+
+$downloadUrl = "https://github.com/tabler/tabler-icons/archive/refs/tags/{$latestVersion}.zip";
+file_put_contents($tempFile, file_get_contents($downloadUrl));
 
 echo 'Downloaded. Extracting the archive...' . PHP_EOL;
 
@@ -28,17 +45,40 @@ if ($zip->open($tempFile) === true) {
     exit;
 }
 
-$baseFolder = __DIR__ . '/temp/tabler-icons-master/icons';
+// Find the extracted folder (it will be named tabler-icons-{version})
+$tempDir = __DIR__ . '/temp';
+$versionWithoutV = ltrim($latestVersion, 'v'); // Remove 'v' prefix if present
+$expectedFolderName = "tabler-icons-{$versionWithoutV}";
+$baseFolder = $tempDir . '/' . $expectedFolderName . '/icons';
 
-foreach (glob($baseFolder . '/*.svg') as $fullPath) {
-    $fileName = str_replace($baseFolder . '/', '', $fullPath);
+if (!is_dir($baseFolder)) {
+    echo "Error: Could not find icons folder at {$baseFolder}!" . PHP_EOL;
+    exit;
+}
 
-    $name = str_replace('.svg', '', $fileName) . '.blade.php';
-    $to = __DIR__ . '/../resources/views/components/' . $name;
+// Process icons from subdirectories (outline, filled, etc.)
+$iconSubdirs = glob($baseFolder . '/*', GLOB_ONLYDIR);
 
-    echo "-> $to \n";
+foreach ($iconSubdirs as $subdir) {
+    $subdirName = basename($subdir);
+    echo "Processing {$subdirName} icons..." . PHP_EOL;
 
-    $filesystem->copy($fullPath, $to);
+    foreach (glob($subdir . '/*.svg') as $fullPath) {
+        $fileName = basename($fullPath);
+        $iconName = str_replace('.svg', '', $fileName);
+
+        // Add prefix for non-outline icons to avoid conflicts
+        if ($subdirName !== 'outline') {
+            $iconName = $iconName . '-' . $subdirName;
+        }
+
+        $name = $iconName . '.blade.php';
+        $to = __DIR__ . '/../resources/views/components/' . $name;
+
+        echo "-> $to \n";
+
+        $filesystem->copy($fullPath, $to);
+    }
 }
 
 echo 'Cleanup files...' . PHP_EOL;

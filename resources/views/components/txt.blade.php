@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-txt" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+category: Extensions
+tags: [file, format, type, document, filetype]
+version: "1.93"
+unicode: "f3b1"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M3 8h4" />
   <path d="M5 8v8" />
   <path d="M17 8h4" />
@@ -7,5 +22,3 @@
   <path d="M10 8l4 8" />
   <path d="M10 16l4 -8" />
 </svg>
-
-

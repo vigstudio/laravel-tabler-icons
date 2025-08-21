@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-teams" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [microsoft, technology]
+category: Brand
+version: "2.23"
+unicode: "fadf"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M3 7h10v10h-10z" />
   <path d="M6 10h4" />
   <path d="M8 10v4" />
@@ -8,5 +23,3 @@
   <path d="M13.003 8.83a3 3 0 1 0 -1.833 -1.833" />
   <path d="M15.83 8.36a2.5 2.5 0 1 0 .594 -4.117" />
 </svg>
-
-

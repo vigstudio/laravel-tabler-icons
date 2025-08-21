@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-time-duration-5" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [five, minutes, interval, timer, duration, short, quick, brief, span, clock]
+category: System
+version: "2.22"
+unicode: "fad9"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M10 15h2a1.5 1.5 0 0 0 0 -3h-2v-3h3.5" />
   <path d="M3 12v.01" />
   <path d="M21 12v.01" />
@@ -13,5 +28,3 @@
   <path d="M4.2 7.5v.01" />
   <path d="M16.5 4.206a9.042 9.042 0 0 0 -4.5 -1.206" />
 </svg>
-
-

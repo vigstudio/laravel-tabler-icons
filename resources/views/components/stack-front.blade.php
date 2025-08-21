@@ -1,8 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-stack-front" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<!--
+tags: [layers, depth, foreground, arrangement, position, sequence, structure, priority, place, front]
+version: "2.40"
+unicode: "fd29"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M12 4l-8 4l8 4l8 -4l-8 -4" fill="currentColor" />
   <path d="M8 14l-4 2l8 4l8 -4l-4 -2" />
   <path d="M8 10l-4 2l8 4l8 -4l-4 -2" />
 </svg>
-
-
