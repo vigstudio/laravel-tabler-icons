@@ -1,8 +1,16 @@
 {
     "name": "vigstudio/laravel-tabler-icons",
-    "description": "The Tabler Icons Blade Component",
+    "description": "The Tabler Icons Blade Component with Facade Support",
+    "version": "2.0.0",
     "keywords": [
-        "laravel-tabler-icons"
+        "laravel-tabler-icons",
+        "tabler-icons",
+        "icons",
+        "svg-icons",
+        "blade-components",
+        "facade",
+        "laravel",
+        "tailwind-css"
     ],
     "homepage": "https://github.com/vigstudio/laravel-tabler-icons",
     "license": "MIT",
