@@ -224,7 +224,7 @@
                                 <div class="method-label">Method 1: Facade</div>
                                 @php
                                     $methodName = \VigStudio\TablerIcons\TablerIcon::convertIconNameToMethodName($iconName);
-                                    $facadeCode = "{!! TablerIcon::" . $methodName . "(['class' => 'icon']) !!}";
+                                    $facadeCode = "{!! TablerIcon::{$methodName}(['class' => 'icon']) !!}";
                                 @endphp
                                 <div class="method-code">{{ $facadeCode }}</div>
                             </div>
