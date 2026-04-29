@@ -1,0 +1,88 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Illuminate\Filesystem\Filesystem;
+
+$filesystem = new Filesystem();
+
+$tempFile = __DIR__ . '/temp.zip';
+
+echo 'Getting latest version...' . PHP_EOL;
+
+// Get latest release info from GitHub API
+$latestReleaseUrl = 'https://api.github.com/repos/tabler/tabler-icons/releases/latest';
+$context = stream_context_create([
+    'http' => [
+        'method' => 'GET',
+        'header' => [
+            'User-Agent: PHP'
+        ]
+    ]
+]);
+
+$releaseData = json_decode(file_get_contents($latestReleaseUrl, false, $context), true);
+$latestVersion = $releaseData['tag_name'];
+
+echo "Downloading icons version {$latestVersion}..." . PHP_EOL;
+
+$downloadUrl = "https://github.com/tabler/tabler-icons/archive/refs/tags/{$latestVersion}.zip";
+file_put_contents($tempFile, file_get_contents($downloadUrl));
+
+echo 'Downloaded. Extracting the archive...' . PHP_EOL;
+
+$zip = new ZipArchive;
+
+if ($zip->open($tempFile) === true) {
+    $zip->extractTo(__DIR__ . '/temp');
+    $zip->close();
+    echo 'Extracted successfully. Updating the blade components...' . PHP_EOL;
+
+    $filesystem->delete($tempFile);
+} else {
+    echo 'Failed!';
+    exit;
+}
+
+// Find the extracted folder (it will be named tabler-icons-{version})
+$tempDir = __DIR__ . '/temp';
+$versionWithoutV = ltrim($latestVersion, 'v'); // Remove 'v' prefix if present
+$expectedFolderName = "tabler-icons-{$versionWithoutV}";
+$baseFolder = $tempDir . '/' . $expectedFolderName . '/icons';
+
+if (!is_dir($baseFolder)) {
+    echo "Error: Could not find icons folder at {$baseFolder}!" . PHP_EOL;
+    exit;
+}
+
+// Process icons from subdirectories (outline, filled, etc.)
+$iconSubdirs = glob($baseFolder . '/*', GLOB_ONLYDIR);
+
+foreach ($iconSubdirs as $subdir) {
+    $subdirName = basename($subdir);
+    echo "Processing {$subdirName} icons..." . PHP_EOL;
+
+    foreach (glob($subdir . '/*.svg') as $fullPath) {
+        $fileName = basename($fullPath);
+        $iconName = str_replace('.svg', '', $fileName);
+
+        // Add prefix for non-outline icons to avoid conflicts
+        if ($subdirName !== 'outline') {
+            $iconName = $iconName . '-' . $subdirName;
+        }
+
+        $name = $iconName . '.blade.php';
+        $to = __DIR__ . '/../resources/views/components/' . $name;
+
+        echo "-> $to \n";
+
+        $filesystem->copy($fullPath, $to);
+    }
+}
+
+echo 'Cleanup files...' . PHP_EOL;
+
+$filesystem->deleteDirectory(__DIR__ . '/temp');
+
+echo 'Done!';
